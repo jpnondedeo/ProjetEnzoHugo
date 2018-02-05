@@ -1,2 +1,8 @@
-msg = "Hello World"
-print(msg)
+from tkinter import * 
+
+fenetre = Tk()
+
+label = Label(fenetre, text="Hello World")
+label.pack()
+
+fenetre.mainloop()
