@@ -3,7 +3,7 @@ from tkinter import *
 
 fenetre = Tk()
 
-Frame1 = Frame(fenetre, borderwidth=2, relief=GROOVE, bg='red')
+Frame1 = Frame(fenetre, borderwidth=2, relief=GROOVE, bg='yellow')
 Frame1.pack(side=LEFT, padx=300, pady=300)
 
 
