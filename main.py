@@ -1,4 +1,5 @@
 import pygame
+from carre import Carre
 
 #Initialisation de pygame
 pygame.init()
