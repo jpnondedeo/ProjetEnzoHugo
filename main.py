@@ -3,12 +3,13 @@ pygame.init()
 
 #Création d'une fenetre de la taille de l'ecran
 ecran = pygame.display.set_mode((1250, 700))
-
+image = pygame.image.load("image/guerier.png").convert_alpha()
 pygame.display.set_caption("Projet Python Enzo et Hugo !")
 
 continuer = True
 
 while continuer:
+   
     pygame.draw.rect(ecran, (225,0,0), (0, 00, 62.5,58.33))
     pygame.draw.rect(ecran, (119, 245, 5), (62.5,00, 62.5,58.33))
     pygame.draw.rect(ecran, (107, 219, 4), (125,00, 62.5,58.33))
@@ -260,6 +261,7 @@ while continuer:
     pygame.draw.rect(ecran, (119, 245, 5), (1062.5,641.63, 62.5,58.33))
     pygame.draw.rect(ecran, (107, 219, 4), (1125,641.63, 62.5,58.33))
     pygame.draw.rect(ecran, (15, 5, 107), (1187.5,641.63, 62.5,58.33))
+    ecran.blit(image, (0, 50))
     for event in pygame.event.get():
         if event.type == pygame.KEYDOWN:
             continuer = False
