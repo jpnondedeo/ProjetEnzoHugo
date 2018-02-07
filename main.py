@@ -1,10 +1,13 @@
 import pygame
 pygame.init()
+from tkinter import *
+import random
 
 #Création d'une fenetre de la taille de l'ecran
 ecran = pygame.display.set_mode((1250, 700))
 image = pygame.image.load("image/guerrier.png").convert_alpha()
 pygame.display.set_caption("Projet Python Enzo et Hugo !")
+
 
 continuer = True
 
@@ -262,9 +265,11 @@ while continuer:
     pygame.draw.rect(ecran, (107, 219, 4), (1125,641.63, 62.5,58.33))
     pygame.draw.rect(ecran, (15, 5, 107), (1187.5,641.63, 62.5,58.33))
     ecran.blit(image, (0, 50))
+    
     for event in pygame.event.get():
         if event.type == pygame.KEYDOWN:
             continuer = False
+            
 
     #Actulisation pour afficher le rectangle 
     pygame.display.flip()
