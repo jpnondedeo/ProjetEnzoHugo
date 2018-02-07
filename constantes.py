@@ -1,13 +1,14 @@
 #Paramètre de la fenetre
 nombre_sprite_cote = 20
-taile_sprite = 30
-cote_fenetre = nombre_sprite_cote * taile_sprite
+taille_sprite = 30
+cote_fenetre = nombre_sprite_cote * taille_sprite
 
 #Personnalisation de la fenêtre
 titre_fenetre = "Projet Python"
 image_icone = "images/iconWarrior.png"
 
 #Images du jeu
+image_accueil = "images/accueil.png"
 image_bleu = "images/carreBleu.png"
 image_rouge = "images/carreRouge.png"
 image_marron = "images/carreMarron.png"
