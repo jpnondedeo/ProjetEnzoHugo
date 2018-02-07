@@ -1,17 +1,16 @@
-import pygame
-
-#Initialisation de pygame
 pygame.init()
 
 #Création d'une fenetre de la taille de l'ecran redimensionnable
+ecran = pygame.display.set_mode((0, 0), pygame.RESIZABLE)
 ecran = pygame.display.set_mode((1250, 700))
 
 pygame.display.set_caption("Projet Python Enzo et Hugo !")
 
-continuer = True
+@ -12,11 +12,260 @@ continuer = True
 
 while continuer:
     #On crée un rectangle rose
+    pygame.draw.rect(ecran, (180, 20, 150), (0, 0, 300, 200))
     pygame.draw.rect(ecran, (225,0,0), (0, 00, 62.5,58.33))
     pygame.draw.rect(ecran, (119, 245, 5), (62.5,00, 62.5,58.33))
     pygame.draw.rect(ecran, (107, 219, 4), (125,00, 62.5,58.33))
@@ -266,6 +265,7 @@ while continuer:
     for event in pygame.event.get():
         if event.type == pygame.KEYDOWN:
             continuer = False
+
     #Actulisation pour afficher le rectangle rose
     pygame.display.flip()
 pygame.quit()
