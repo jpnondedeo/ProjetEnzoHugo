@@ -1,16 +1,14 @@
+import pygame
 pygame.init()
 
-#Création d'une fenetre de la taille de l'ecran redimensionnable
-ecran = pygame.display.set_mode((0, 0), pygame.RESIZABLE)
+#Création d'une fenetre de la taille de l'ecran
 ecran = pygame.display.set_mode((1250, 700))
 
 pygame.display.set_caption("Projet Python Enzo et Hugo !")
 
-@ -12,11 +12,260 @@ continuer = True
+continuer = True
 
 while continuer:
-    #On crée un rectangle rose
-    pygame.draw.rect(ecran, (180, 20, 150), (0, 0, 300, 200))
     pygame.draw.rect(ecran, (225,0,0), (0, 00, 62.5,58.33))
     pygame.draw.rect(ecran, (119, 245, 5), (62.5,00, 62.5,58.33))
     pygame.draw.rect(ecran, (107, 219, 4), (125,00, 62.5,58.33))
@@ -53,7 +51,7 @@ while continuer:
     pygame.draw.rect(ecran, (107, 219, 4), (1125,58.33, 62.5,58.33))
     pygame.draw.rect(ecran, (15, 5, 107), (1187.5,58.33, 62.5,58.33))
 
-    pygame.draw.rect(ecran, (225,0,0), (0,116.66, 62.5,58.33))
+    pygame.draw.rect(ecran, (107, 219, 4), (0,116.66, 62.5,58.33))
     pygame.draw.rect(ecran, (119, 245, 5), (62.5,116.66, 62.5,58.33))
     pygame.draw.rect(ecran, (107, 219, 4), (125,116.66, 62.5,58.33))
     pygame.draw.rect(ecran, (119, 245, 5), (187.5,116.66, 62.5,58.33))
@@ -72,7 +70,7 @@ while continuer:
     pygame.draw.rect(ecran, (119, 245, 5), (1000,116.66, 62.5,58.33))
     pygame.draw.rect(ecran, (107, 219, 4), (1062.5,116.66, 62.5,58.33))
     pygame.draw.rect(ecran, (119, 245, 5), (1125,116.66, 62.5,58.33))
-    pygame.draw.rect(ecran, (15, 5, 107), (1187.5,116.66, 62.5,58.33))
+    pygame.draw.rect(ecran, (107, 219, 4), (1187.5,116.66, 62.5,58.33))
 
     pygame.draw.rect(ecran, (225,0,0), (0,174.99, 62.5,58.33))
     pygame.draw.rect(ecran, (107, 219, 4), (62.5,174.99, 62.5,58.33))
@@ -116,7 +114,7 @@ while continuer:
     pygame.draw.rect(ecran, (119, 245, 5), (1125,233.32, 62.5,58.33))
     pygame.draw.rect(ecran, (15, 5, 107), (1187.5,233.32, 62.5,58.33))
 
-    pygame.draw.rect(ecran, (225,0,0), (0, 291.65, 62.5,58.33))
+    pygame.draw.rect(ecran, (119, 245, 5), (0, 291.65, 62.5,58.33))
     pygame.draw.rect(ecran, (107, 219, 4), (62.5, 291.65, 62.5,58.33))
     pygame.draw.rect(ecran, (119, 245, 5), (125, 291.65, 62.5,58.33))
     pygame.draw.rect(ecran, (107, 219, 4), (187.5, 291.65, 62.5,58.33))
@@ -135,9 +133,9 @@ while continuer:
     pygame.draw.rect(ecran, (107, 219, 4), (1000, 291.65, 62.5,58.33))
     pygame.draw.rect(ecran, (119, 245, 5), (1062.5, 291.65, 62.5,58.33))
     pygame.draw.rect(ecran, (107, 219, 4), (1125, 291.65, 62.5,58.33))
-    pygame.draw.rect(ecran, (15, 5, 107), (1187.5, 291.65, 62.5,58.33))
+    pygame.draw.rect(ecran, (119, 245, 5), (1187.5, 291.65, 62.5,58.33))
        
-    pygame.draw.rect(ecran, (225,0,0), (0,349.98, 62.5,58.33))
+    pygame.draw.rect(ecran, (107, 219, 4), (0,349.98, 62.5,58.33))
     pygame.draw.rect(ecran, (119, 245, 5), (62.5,349.98, 62.5,58.33))
     pygame.draw.rect(ecran, (107, 219, 4), (125,349.98, 62.5,58.33))
     pygame.draw.rect(ecran, (119, 245, 5), (187.5,349.98, 62.5,58.33))
@@ -156,7 +154,7 @@ while continuer:
     pygame.draw.rect(ecran, (119, 245, 5), (1000,349.98, 62.5,58.33))
     pygame.draw.rect(ecran, (107, 219, 4), (1062.5,349.98, 62.5,58.33))
     pygame.draw.rect(ecran, (119, 245, 5), (1125,349.98, 62.5,58.33))
-    pygame.draw.rect(ecran, (15, 5, 107), (1187.5,349.98, 62.5,58.33))
+    pygame.draw.rect(ecran, (107, 219, 4), (1187.5,349.98, 62.5,58.33))
     
     pygame.draw.rect(ecran, (225,0,0), (0, 408.31, 62.5,58.33))
     pygame.draw.rect(ecran, (107, 219, 4), (62.5,408.31, 62.5,58.33))
@@ -200,7 +198,7 @@ while continuer:
     pygame.draw.rect(ecran, (119, 245, 5), (1125,466.64, 62.5,58.33))
     pygame.draw.rect(ecran, (15, 5, 107), (1187.5,466.64, 62.5,58.33))
     
-    pygame.draw.rect(ecran, (225,0,0), (0, 524.97, 62.5,58.33))
+    pygame.draw.rect(ecran, (119, 245, 5), (0, 524.97, 62.5,58.33))
     pygame.draw.rect(ecran, (107, 219, 4), (62.5,524.97, 62.5,58.33))
     pygame.draw.rect(ecran, (119, 245, 5), (125,524.97, 62.5,58.33))
     pygame.draw.rect(ecran, (107, 219, 4), (187.5,524.97, 62.5,58.33))
@@ -219,7 +217,7 @@ while continuer:
     pygame.draw.rect(ecran, (107, 219, 4), (1000,524.97, 62.5,58.33))
     pygame.draw.rect(ecran, (119, 245, 5), (1062.5,524.97, 62.5,58.33))
     pygame.draw.rect(ecran, (107, 219, 4), (1125,524.97, 62.5,58.33))
-    pygame.draw.rect(ecran, (15, 5, 107), (1187.5,524.97, 62.5,58.33))
+    pygame.draw.rect(ecran, (119, 245, 5), (1187.5,524.97, 62.5,58.33))
 
     pygame.draw.rect(ecran, (225,0,0), (0, 583.3, 62.5,58.33))
     pygame.draw.rect(ecran, (119, 245, 5), (62.5,583.3, 62.5,58.33))
@@ -266,6 +264,6 @@ while continuer:
         if event.type == pygame.KEYDOWN:
             continuer = False
 
-    #Actulisation pour afficher le rectangle rose
+    #Actulisation pour afficher le rectangle 
     pygame.display.flip()
 pygame.quit()
