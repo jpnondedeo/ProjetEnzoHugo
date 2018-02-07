@@ -3,7 +3,7 @@ pygame.init()
 
 #Création d'une fenetre de la taille de l'ecran
 ecran = pygame.display.set_mode((1250, 700))
-image = pygame.image.load("image/guerier.png").convert_alpha()
+image = pygame.image.load("image/guerrier.png").convert_alpha()
 pygame.display.set_caption("Projet Python Enzo et Hugo !")
 
 continuer = True
