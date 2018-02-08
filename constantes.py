@@ -6,6 +6,7 @@ cote_fenetre = nombre_sprite_cote * taille_sprite
 #Personnalisation de la fenêtre
 titre_fenetre = "Projet Python"
 image_icone = "images/iconWarrior.png"
+image_fond = "images/fond.png"
 
 #Images du jeu
 image_accueil = "images/accueil.png"

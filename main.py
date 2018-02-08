@@ -6,7 +6,7 @@ from constantes import *
 pygame.init()
 
 #Ouverture fenetre
-fenetre = pygame.display.set_mode((cote_fenetre, cote_fenetre))
+fenetre = pygame.display.set_mode((cote_fenetre + 600, cote_fenetre + 120))
 
 icone = pygame.image.load(image_icone)
 pygame.display.set_icon(icone)
@@ -16,7 +16,7 @@ pygame.display.set_caption(titre_fenetre)
 continuer = 1
 while continuer:
     #chargement page accueil
-    accueil = pygame.image.load(image_accueil).convert_alpha()
+    accueil = pygame.image.load(image_accueil).convert()
     fenetre.blit(accueil, (0,0))
 
     pygame.display.flip()
@@ -44,6 +44,7 @@ while continuer:
                     choix = 'n1'
     
     if choix != 0:
+        fond = pygame.image.load(image_fond).convert()
         #Génération de la carte 1
         carte = Carte(choix)
         carte.generer()
@@ -64,6 +65,7 @@ while continuer:
                 #si user press echap il revient au menu
                 if event.key == K_ESCAPE:
                     continuer_jeu = 0
-        
+                    
+        fenetre.blit(fond, (0,0))
         carte.afficher(fenetre)
         pygame.display.flip()
