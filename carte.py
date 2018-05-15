@@ -8,26 +8,23 @@ class Carte:
         self.structure = 0
     
     #genere la liste à afficher
-    def generer(self):
-        with open(self.fichier, "r") as fichier:
-            structure_niveau = []
-            for ligne in fichier:
-                ligne_niveau = []
-                for sprite in ligne:
-                    if sprite != '\n':
-                        ligne_niveau.append(sprite)
-                structure_niveau.append(ligne_niveau)
+    def generer(self): #on definit generer 
+        with open(self.fichier, "r") as fichier: #pour ouvrir le fichier et le lire
+            structure_niveau = [] #cree une liste 
+            for ligne in fichier: #pour chaque ligne du ficher
+                ligne_niveau = [] #on fait une liste 
+                for sprite in ligne: #pour chaque lettre de chaque ligne 
+                    if sprite != '\n':#si lettre != de '\n'= retour a la ligne 
+                        ligne_niveau.append(sprite) #on rajoute lettre a la liste ligne niveau 
+                structure_niveau.append(ligne_niveau) # on rajoutte les listes ligne niveau a la liste structure 
             self.structure = structure_niveau
 
     #affiche la map en fonction de la liste generer
     def afficher(self, fenetre):
         #on charge les images
-        baseBleu = pygame.image.load(image_bleu).convert_alpha()
-        baseRouge = pygame.image.load(image_rouge).convert_alpha()
-        pont = pygame.image.load(image_marron).convert_alpha()
-        prairie = pygame.image.load(image_vert).convert_alpha()
-        eau = pygame.image.load(image_eau).convert_alpha()
-
+        coffre = pygame.image.load(image_coffre).convert_alpha()
+        depart = pygame.image.load(image_depart).convert_alpha()
+        mur = pygame.image.load(image_mur).convert_alpha()
         #on parcours la liste du niveau
         num_ligne = 0
         for ligne in self.structure:
@@ -37,15 +34,11 @@ class Carte:
                 #on calcule la position réelle en pixels
                 x = num_case * taille_sprite
                 y = num_ligne * taille_sprite
-                if sprite == 'b':                   #b = carreBleu
-                    fenetre.blit(baseBleu, (x,y))
-                elif sprite == 'r':                 #r = carreRouge
-                    fenetre.blit(baseRouge, (x,y))
-                elif sprite == 'm':                 #m = carreMarron
-                    fenetre.blit(pont, (x,y))
-                elif sprite == 'v':                 #v = carreVert
-                    fenetre.blit(prairie, (x,y))
-                elif sprite == 'e':                 #e = carreEau
-                    fenetre.blit(eau, (x,y))
+                if sprite == 'c':  #si lettre = c charger coffre             
+                    fenetre.blit(coffre, (x,y))
+                elif sprite == 'd':                 #d = depart
+                    fenetre.blit(depart, (x,y))
+                elif sprite == 'm':                 #m = mur
+                    fenetre.blit(mur, (x,y))
                 num_case += 1
             num_ligne += 1
