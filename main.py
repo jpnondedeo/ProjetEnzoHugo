@@ -48,7 +48,9 @@ while continuer: #boucle qui tourne tant que continuer =1
         carte = Carte(choix) # on recupere n1
         carte.generer()
         carte.afficher(fenetre)
-    
+
+        guerrier = Perso("images/gdroite.png","images/ggauche.png","images/gbas.png","images/ghaut.png",carte)
+        
     #BOUCLE JEU
     while continuer_jeu:
         pygame.time.Clock().tick(30)
@@ -64,7 +66,20 @@ while continuer: #boucle qui tourne tant que continuer =1
                 #si user press echap il revient au menu
                 if event.key == K_ESCAPE:
                     continuer_jeu = 0 # pour revenir a l'accueil et fermer le jeu 
+
+                if event.key == K_RIGHT:
+                    guerrier.deplacer('droite')
+
+                if event.key == K_LEFT:
+                    guerrier.deplacer('gauche')
+
+                if event.key == K_UP:
+                    guerrier.deplacer('haut')
+                
+                if event.key == K_DOWN:
+                    guerrier.deplacer('bas')
                     
         fenetre.blit(fond, (0,0)) 
         carte.afficher(fenetre)
+        fenetre.blit(guerrier.direction, (guerrier.x, guerrier.y))
         pygame.display.flip()

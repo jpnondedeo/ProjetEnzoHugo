@@ -42,3 +42,50 @@ class Carte:
                     fenetre.blit(mur, (x,y))
                 num_case += 1
             num_ligne += 1
+
+
+class Perso:
+    def __init__(self, droite, gauche, bas, haut, niveau):
+        self.droite = pygame.image.load(droite).convert_alpha()
+        self.gauche = pygame.image.load(gauche).convert_alpha()
+        self.bas = pygame.image.load(bas).convert_alpha()
+        self.haut = pygame.image.load(haut).convert_alpha()
+
+        self.caseX = 0 #position dans la grille 
+        self.caseY = 0
+        self.x = 0 #position en pixel
+        self.y = 0
+
+        self.direction = self.droite
+        self.niveau = niveau
+
+    def deplacer(self, direction):
+        
+        if direction == 'droite': #si direction = droite
+            if self.caseX < nombre_sprite_cote-1:# et si position < 21
+                if self.niveau.structure[self.caseY][self.caseX+1] !='m': #et si la case de destination n'est pas un mur
+                    self.caseX = self.caseX + 1
+                    self.x = self.x + taille_sprite
+            self.direction = self.droite 
+
+        if direction == 'gauche': #si direction = gauche
+            if self.caseX > 0: # et si position > 0
+                if self.niveau.structure[self.caseY][self.caseX-1] !='m': #et si la case de destination n'est pas un mur
+                    self.caseX = self.caseX - 1
+                    self.x = self.x - taille_sprite
+            self.direction = self.gauche 
+
+        if direction == 'bas': #si direction = bas
+            if self.caseY < nombre_sprite_cote-1: # et si position < 21
+                if self.niveau.structure[self.caseY+1][self.caseX] !='m': #et si la case de destination n'est pas un mur
+                    self.caseY = self.caseY + 1
+                    self.y = self.y + taille_sprite
+            self.direction = self.bas 
+                        
+        if direction == 'haut': #si direction = haut
+            if self.caseY > 0: # et si position >0
+                if self.niveau.structure[self.caseY-1][self.caseX] !='m': #et si la case de destination n'est pas un mur
+                    self.caseY = self.caseY - 1
+                    self.y = self.y - taille_sprite
+            self.direction = self.haut
+            

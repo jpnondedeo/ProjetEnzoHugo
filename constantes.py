@@ -9,7 +9,7 @@ image_icone = "images/iconWarrior.png"
 image_fond = "images/fond.jpg"
 
 #Images du jeu
-image_accueil = "images/accueil.png"
+image_accueil = "images/mur fini.jpg"
 image_coffre = "images/coffre.jpg"
 image_depart = "images/depart.png"
 image_mur = "images/mur.png"
