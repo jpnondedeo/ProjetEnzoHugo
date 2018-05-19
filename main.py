@@ -6,7 +6,7 @@ from constantes import *
 pygame.init()
 
 #Ouverture fenetre
-fenetre = pygame.display.set_mode((cote_fenetre, cote_fenetre)) #fonction pour cree une fenetr
+fenetre = pygame.display.set_mode((cote_fenetre, cote_fenetre)) #fonction pour cree une fenetre
 
 icone = pygame.image.load(image_icone) #icone du jeu chargé
 pygame.display.set_icon(icone) #afficher
@@ -78,6 +78,7 @@ while continuer: #boucle qui tourne tant que continuer =1
                 
                 if event.key == K_DOWN:
                     guerrier.deplacer('bas')
+        
                     
         fenetre.blit(fond, (0,0)) 
         carte.afficher(fenetre)

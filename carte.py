@@ -2,6 +2,7 @@ import pygame
 from pygame.locals import * 
 from constantes import *
 
+fenetre = pygame.display.set_mode((cote_fenetre, cote_fenetre)) #fonction pour cree une fenetre
 class Carte:
     def __init__(self, fichier):
         self.fichier = fichier
@@ -81,6 +82,7 @@ class Perso:
                     self.caseY = self.caseY + 1
                     self.y = self.y + taille_sprite
             self.direction = self.bas 
+            
                         
         if direction == 'haut': #si direction = haut
             if self.caseY > 0: # et si position >0
@@ -88,4 +90,10 @@ class Perso:
                     self.caseY = self.caseY - 1
                     self.y = self.y - taille_sprite
             self.direction = self.haut
+        
+        if self.caseX == 21 and self.caseY == 21 :
+            fin = pygame.image.load(image_fin).convert_alpha #icone du jeu chargé
+            pygame.display.set_icon(fin) 
+        
             
+         
