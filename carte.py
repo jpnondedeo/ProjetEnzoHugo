@@ -91,9 +91,6 @@ class Perso:
                     self.y = self.y - taille_sprite
             self.direction = self.haut
         
-        if self.caseX == 21 and self.caseY == 21 :
-            fin = pygame.image.load(image_fin).convert_alpha #icone du jeu chargé
-            pygame.display.set_icon(fin) 
         
             
          

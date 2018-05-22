@@ -5,7 +5,6 @@ from constantes import *
 
 pygame.init()
 
-#Ouverture fenetre
 fenetre = pygame.display.set_mode((cote_fenetre, cote_fenetre)) #fonction pour cree une fenetre
 
 icone = pygame.image.load(image_icone) #icone du jeu chargé
@@ -44,12 +43,12 @@ while continuer: #boucle qui tourne tant que continuer =1
     
     if choix != 0: # different de 0
         fond = pygame.image.load(image_fond).convert() #charger l'image de fond 
-        #Génération de la carte 1
+        
         carte = Carte(choix) # on recupere n1
         carte.generer()
         carte.afficher(fenetre)
 
-        guerrier = Perso("images/gdroite.png","images/ggauche.png","images/gbas.png","images/ghaut.png",carte)
+        guerrier = Perso("images/Droite ISN.png","images/Gauche ISN.png","images/Face ISN.png","images/Dos ISN.png",carte)
         
     #BOUCLE JEU
     while continuer_jeu:
@@ -57,15 +56,15 @@ while continuer: #boucle qui tourne tant que continuer =1
 
         for event in pygame.event.get():
 
-            #Si user quitte on met variable boucle jeu à 0 et la variable général à 0 pour fermer l'appli
+           
             if event.type == QUIT:
                 continuer_jeu = 0
                 continuer = 0
             
             elif event.type == KEYDOWN:
-                #si user press echap il revient au menu
+               
                 if event.key == K_ESCAPE:
-                    continuer_jeu = 0 # pour revenir a l'accueil et fermer le jeu 
+                    continuer_jeu = 0 # 
 
                 if event.key == K_RIGHT:
                     guerrier.deplacer('droite')
